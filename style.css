@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1em;
+  text-align: center;
+}
+nav a {
+  margin: 0 1em;
+  color: #ffffff;
+  text-decoration: none;
+}
+section {
+  padding: 1em;
+}
+.productos {
+  display: flex;
+  gap: 1em;
+}
+.producto {
+  border: 1px solid #ccc;
+  padding: 1em;
+  max-width: 200px;
+}
+.producto img {
+  width: 100%;
+  height: auto;
+}
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #f0f0f0;
+}
