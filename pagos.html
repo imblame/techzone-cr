@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formas de Pago - TechZONE CR</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .formas-pago {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .pago-card {
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 1rem;
+      width: 300px;
+      background: #f9f9f9;
+      text-align: center;
+    }
+    .pago-card img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+    .pago-card h3 {
+      margin: 0.5rem 0;
+    }
+    .pago-card p {
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TechZONE CR</h1>
+    <nav>
+      <a href="index.html">Catálogo</a>
+      <a href="pagos.html">Formas de Pago</a>
+      <a href="carrito.html">Carrito</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Formas de Pago</h2>
+    <div class="formas-pago">
+      <div class="pago-card">
+        <img src="img/sinpe.png" alt="SINPE Móvil">
+        <h3>SINPE Móvil</h3>
+        <p>Número: <strong>83398093</strong><br>A nombre de: <strong>Franklin Cruz Tejada</strong></p>
+      </div>
+      <div class="pago-card">
+        <img src="img/bac.png" alt="Transferencia BAC">
+        <h3>Transferencia BAC</h3>
+        <p>Cuenta BAC (mismo banco): <strong>966296634</strong><br>
+        Cuenta IBAN (otros bancos): <strong>CR95010200009662966346</strong></p>
+      </div>
+    </div>
+    <p style="text-align:center;">Una vez realizado el pago, por favor completa tu pedido desde el carrito para confirmar tu compra por WhatsApp.</p>
+  </main>
+
+  <footer>
+    <p>© 2025 TechZONE CR</p>
+  </footer>
+</body>
+</html>
