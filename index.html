@@ -3,62 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TechZONE CR</title>
+  <title>TechZONE CR - Catálogo</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>TechZONE CR</h1>
     <nav>
-      <a href="#catalogo">Catálogo</a>
-      <a href="#pagos">Formas de Pago</a>
-      <a href="#carrito">Carrito</a>
+      <a href="index.html">Catálogo</a>
+      <a href="pagos.html">Formas de Pago</a>
+      <a href="carrito.html">Carrito</a>
     </nav>
   </header>
+
+  <div id="carrito-flotante" onmouseenter="mostrarCarritoFlotante()" onmouseleave="ocultarCarritoFlotante()">
+    <div id="carrito-resumen">
+      <span>🛒 Ver Carrito</span>
+    </div>
+    <div id="carrito-detalles" class="oculto">
+      <ul id="lista-carrito-mini"></ul>
+      <p id="total-mini">Total: ₡0</p>
+      <div class="botones-carrito">
+        <button onclick="irACarrito()">Ir a compra</button>
+        <button onclick="ocultarCarritoFlotante()">Seguir viendo</button>
+      </div>
+    </div>
+  </div>
 
   <section id="catalogo">
     <h2>Catálogo de Productos</h2>
     <div class="productos">
-      <div class="producto">
-        <img src="img/ejemplo1.jpg" alt="Producto 1"/>
+      <div class="producto" onclick="abrirModal(0)">
+        <img src="img/prod1_1.jpg" alt="Audífonos Gamer"/>
         <h3>Audífonos Gamer</h3>
-        <p>Precio: ₡15,000</p>
-        <button onclick="agregarAlCarrito('Audífonos Gamer', 15000)">Agregar al carrito</button>
+        <p>₡15,000</p>
       </div>
-      <div class="producto">
-        <img src="img/ejemplo2.jpg" alt="Producto 2"/>
+      <div class="producto" onclick="abrirModal(1)">
+        <img src="img/prod2_1.jpg" alt="Mouse Inalámbrico"/>
         <h3>Mouse Inalámbrico</h3>
-        <p>Precio: ₡8,500</p>
-        <button onclick="agregarAlCarrito('Mouse Inalámbrico', 8500)">Agregar al carrito</button>
+        <p>₡8,500</p>
       </div>
     </div>
   </section>
 
-  <section id="pagos">
-    <h2>Formas de Pago</h2>
-    <ul>
-      <li><strong>SINPE MÓVIL:</strong> 83398093 a nombre de Franklin Cruz Tejada</li>
-      <li><strong>Transferencia bancaria - BAC:</strong>
-        <ul>
-          <li>Cuenta BAC: 966296634</li>
-          <li>Cuenta IBAN: CR95010200009662966346</li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-
-  <section id="carrito">
-    <h2>Carrito</h2>
-    <ul id="lista-carrito"></ul>
-    <input type="text" id="nombreCliente" placeholder="Tu nombre">
-    <input type="text" id="telefonoCliente" placeholder="Tu número de teléfono">
-    <button onclick="enviarWhatsApp()">Enviar pedido por WhatsApp</button>
-  </section>
+  <!-- Modal de producto -->
+  <div id="modal-producto" class="modal oculto">
+    <div class="modal-contenido">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <div class="galeria">
+        <img id="modal-img-1" src="" alt="img1">
+        <img id="modal-img-2" src="" alt="img2">
+        <img id="modal-img-3" src="" alt="img3">
+        <img id="modal-img-4" src="" alt="img4">
+      </div>
+      <h2 id="modal-titulo"></h2>
+      <p id="modal-descripcion"></p>
+      <p id="modal-precio"></p>
+      <button id="btn-agregar">Agregar al carrito</button>
+    </div>
+  </div>
 
   <footer>
     <p>© 2025 TechZONE CR</p>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
